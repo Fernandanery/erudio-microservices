@@ -2,6 +2,7 @@
 using GeekShopping.ProductAPI.Model.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.ProductAPI.Migrations
 {
     [DbContext(typeof(MySqlContext))]
-    partial class MySqlContextModelSnapshot : ModelSnapshot
+    [Migration("20230820180126_camisetas")]
+    partial class camisetas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,7 +63,7 @@ namespace GeekShopping.ProductAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 12L,
+                            Id = 2L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta personagens",
                             ImageURL = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic3.tcdn.com.br%2Fimg%2Fimg_prod%2F906555%2Fcamiseta_cartoon_90_bike_41_1_20201204185144.jpg&tbnid=ZjdvOhHZXfNEJM&vet=12ahUKEwj1ueiY3uuAAxWgg5UCHfZMDMcQMygJegUIARCNAQ..i&imgrefurl=https%3A%2F%2Fwww.cnshop.com.br%2Fcamiseta-cartoon-90-bike&docid=_SrgGj80pkKFRM&w=802&h=1200&q=camiseta&ved=2ahUKEwj1ueiY3uuAAxWgg5UCHfZMDMcQMygJegUIARCNAQ",
@@ -69,7 +72,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 13L,
+                            Id = 3L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta super mário",
                             ImageURL = "https://www.camisetasbichopreguica.com.br/media/product/87a/camiseta-super-mario-bros-s-456-a6a.jpg",
@@ -78,7 +81,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 14L,
+                            Id = 4L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta pernalonga",
                             ImageURL = "http://images.tcdn.com.br/img/img_prod/948023/camiseta_pernalonga_3813_variacao_11149_1_a10f6fec8eb39c6100650bf4592d0a03.jpg",
@@ -87,7 +90,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 15L,
+                            Id = 5L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta dolce e gabbana",
                             ImageURL = "https://prettynew.vtexassets.com/arquivos/ids/267017-1200-auto?v=638044049378370000&width=1200&height=auto&aspect=true",
@@ -96,7 +99,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 16L,
+                            Id = 6L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta Star Wars",
                             ImageURL = "https://media.camden.es/c/product/camiseta-star-wars-520x520_sheOoi0.jpg",
@@ -105,7 +108,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 17L,
+                            Id = 7L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta Marvel",
                             ImageURL = "https://static.riachuelo.com.br/RCHLO/14547457001/portrait/bd6ed0c3191c2208b92545273c5b25f18e414594.jpg",
@@ -114,7 +117,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 18L,
+                            Id = 8L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta DC",
                             ImageURL = "https://static3.tcdn.com.br/img/img_prod/352023/camiseta_masculina_dc_comics_villains_3745_1_20220222135325.jpg",
@@ -123,7 +126,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 19L,
+                            Id = 9L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta Homen Aranha",
                             ImageURL = "https://www.camisetasbichopreguica.com.br/media/product/fd2/camiseta-homem-aranha-7d6.jpg",
@@ -132,7 +135,7 @@ namespace GeekShopping.ProductAPI.Migrations
                         },
                         new
                         {
-                            Id = 20L,
+                            Id = 10L,
                             CategoryName = "T-Shirt",
                             Description = "Camiseta Mulher Maravilha",
                             ImageURL = "https://images.fatum.com.br/site/produtos/39_20903_01.jpg?losslevel=1&v=10.4",
