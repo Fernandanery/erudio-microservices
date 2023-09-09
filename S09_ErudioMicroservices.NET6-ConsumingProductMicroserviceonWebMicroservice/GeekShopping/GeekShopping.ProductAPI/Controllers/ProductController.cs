@@ -14,7 +14,6 @@ namespace GeekShopping.ProductAPI.Controllers
         public ProductController(IProductRepository repository)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
-
         }
 
         [HttpGet]
@@ -23,7 +22,6 @@ namespace GeekShopping.ProductAPI.Controllers
             var products = await _repository.FindAll();
 
             return Ok(products);
-
         }
 
         [HttpGet("{id}")]
@@ -34,24 +32,20 @@ namespace GeekShopping.ProductAPI.Controllers
             if (product.Id <= 0) return NotFound();
 
             return Ok(product);
-
         }
 
         [HttpPost]
-        public async Task<ActionResult<ProductVO>> CreateProducts(ProductVO vo)
+        public async Task<ActionResult<ProductVO>> CreateProducts([FromBody]ProductVO vo)
         {
-
             if (vo == null) return BadRequest();
             var product = await _repository.Create(vo);
 
             return Ok(product);
-
         }
 
         [HttpPut]
-        public async Task<ActionResult<ProductVO>> UpdateProducts(ProductVO vo)
+        public async Task<ActionResult<ProductVO>> UpdateProducts([FromBody]ProductVO vo)
         {
-
             if (vo == null) return BadRequest();
             var product = await _repository.Update(vo);
 
@@ -60,13 +54,12 @@ namespace GeekShopping.ProductAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(long id)
+        public async Task<ActionResult> DeleteProducts(long id)
         {
             var status = await _repository.Delete(id);
             if (!status) return BadRequest();
 
-            return Ok(status);
- 
+            return Ok(status); 
         }
     }
 }
